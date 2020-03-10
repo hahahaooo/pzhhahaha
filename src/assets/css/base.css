@@ -1,0 +1,67 @@
+@import "./normalize.css"; 
+@import './font-icon.css';
+/* 提前定义变量 var(--color-text)*/
+:root {
+  --color-text      : #666;
+  --color-high-text : #ff5777;
+  --color-tint      : #ff8198;
+  --color-background: #fff;
+  --line-height     : 1.5;
+  --font-size       : 14px;
+}
+
+.display{
+  display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+  display: -moz-box; /* Firefox 17- */
+  display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+  display: -moz-flex; /* Firefox 18+ */
+  display: -ms-flexbox; /* IE 10 */
+  display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+}
+::before,
+::after {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+
+body {
+  touch-action: none;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  user-select: none;
+  /* 禁止用户鼠标在页面上选中文字/图片等 */
+  -webkit-tap-highlight-color: transparent;
+  /* webkit是苹果浏览器引擎，tap点击，height背景高亮，color颜色，颜色用数值调节 */
+  background: var(--color-background);
+  color     : var(--color-text);
+  /* width     : 100vh; 加了这个屏幕就很怪了*/
+}
+
+a {
+  color          : var(--color-text);
+  text-decoration: none;
+}
+
+.clear-fix::after {
+  clear     : both;
+  content   : '';
+  display   : block;
+  width     : 0;
+  height    : 0;
+  visibility: hidden;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
